@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\Informasi;
@@ -14,8 +15,11 @@ class DashboardController extends Controller
         $informasi = Informasi::latest()->take(1)->get();
 
         // Produk unggulan: harga paling murah, 4 data
-        $featuredProducts = Product::orderBy('harga', 'asc')->take(4)->get();
+        $unggulanProducts = Product::latest()->take(4)->get();
 
-        return view('dashboard', compact('informasi', 'featuredProducts'));
+        $hotDeals = Product::orderBy('harga', 'asc')->take(1)->get();
+$bestSeller = Product::orderBy('harga', 'desc')->take(1)->get();
+$featuredProducts = Product::where('harga', true)->get();
+        return view('dashboard', compact('hotDeals', 'bestSeller', 'featuredProducts', 'informasi', 'unggulanProducts'));
     }
 }

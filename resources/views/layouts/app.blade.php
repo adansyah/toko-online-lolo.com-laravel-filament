@@ -15,7 +15,7 @@
     @vite('resources/css/app.css')
     <style>
         body {
-            font-family: "Poppins", sans-serif;
+            font-family: "glyphicons-halflings", sans-serif;
         }
     </style>
 </head>

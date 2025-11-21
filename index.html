@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Toko Online – Landing Page</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            /* Fade-in on scroll */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            }
+            .fade-in.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+
+    <body class="bg-gray-100 text-gray-800 font-sans">
+        <!-- NAVBAR -->
+        <header
+            class="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-sm"
+        >
+            <div
+                class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+            >
+                <h1 class="text-2xl font-bold tracking-wide text-gray-900">
+                    TOKOKU
+                </h1>
+
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+                    <a href="#" class="hover:text-gray-600 transition">Home</a>
+                    <a href="#" class="hover:text-gray-600 transition"
+                        >Products</a
+                    >
+                    <a href="#" class="hover:text-gray-600 transition"
+                        >Categories</a
+                    >
+                    <a href="#" class="hover:text-gray-600 transition"
+                        >Contact</a
+                    >
+                </nav>
+
+                <div class="flex items-center space-x-6">
+                    <!-- Cart -->
+                    <button class="relative hover:scale-110 transition">
+                        <svg
+                            class="w-6 h-6 text-gray-700"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-2 9m5-9v9m6-9v9"
+                            />
+                        </svg>
+                        <span
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 rounded-full"
+                            >2</span
+                        >
+                    </button>
+
+                    <a
+                        href="#"
+                        class="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+                    >
+                        Sign In
+                    </a>
+
+                    <button class="md:hidden" id="menu-btn">
+                        <svg
+                            class="w-7 h-7 text-gray-800"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden px-6 pb-4 space-y-3 text-sm font-semibold"
+            >
+                <a href="#" class="block">Home</a>
+                <a href="#" class="block">Products</a>
+                <a href="#" class="block">Categories</a>
+                <a href="#" class="block">Contact</a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="pt-28 pb-20">
+            <div
+                class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+            >
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                        Temukan Produk Terbaik untuk Kebutuhanmu
+                    </h2>
+                    <p class="mt-4 text-gray-600">
+                        Belanja dengan mudah, cepat, dan harga terbaik. Koleksi
+                        terbaru setiap minggu!
+                    </p>
+
+                    <button
+                        class="mt-6 px-6 py-3 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-gray-700 hover:scale-105 transition"
+                    >
+                        Belanja Sekarang
+                    </button>
+                </div>
+
+                <div class="fade-in">
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                        class="rounded-xl shadow-lg hover:scale-105 transition"
+                        alt="Hero Product"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-2xl font-bold mb-10 fade-in">
+                    Kategori Terpopuler
+                </h3>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div
+                        class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-xl transition hover:-translate-y-2 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1528701800489-20be3c6ba85c"
+                            class="rounded-lg mb-4 h-44 w-full object-cover"
+                        />
+                        <h4 class="font-semibold text-lg">Fashion</h4>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-xl transition hover:-translate-y-2 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1581291518831-6a9f81f63906"
+                            class="rounded-lg mb-4 h-44 w-full object-cover"
+                        />
+                        <h4 class="font-semibold text-lg">Aksesoris</h4>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-xl transition hover:-translate-y-2 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796"
+                            class="rounded-lg mb-4 h-44 w-full object-cover"
+                        />
+                        <h4 class="font-semibold text-lg">Elektronik</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT LIST -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-2xl font-bold mb-10 fade-in">Produk Terbaru</h3>
+
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- PRODUCT CARD -->
+                    <div
+                        class="bg-white rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition p-4 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+                            class="rounded-lg mb-4 h-48 w-full object-cover"
+                        />
+                        <h4 class="font-semibold">Sneakers</h4>
+                        <p class="text-gray-600 text-sm">$59.00</p>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition p-4 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+                            class="rounded-lg mb-4 h-48 w-full object-cover"
+                        />
+                        <h4 class="font-semibold">T-Shirt</h4>
+                        <p class="text-gray-600 text-sm">$29.00</p>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition p-4 fade-in"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+                            class="rounded-lg mb-4 h-48 w-full object-cover"
+                        />
+                        <h4 class="font-semibold">Hoodie</h4>
+                        <p class="text-gray-600 text-sm">$39.00</p>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition p-4 fade-in"
+                    >
+                        <img
+                            src="public/st.jpg"
+                            class="rounded-lg mb-4 h-48 w-full object-cover"
+                        />
+                        <h4 class="font-semibold">Pants</h4>
+                        <p class="text-gray-600 text-sm">$49.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-gray-900 text-white text-center">
+            <h2 class="text-3xl md:text-4xl font-bold fade-in">
+                Belanja Lebih Hemat Sekarang!
+            </h2>
+            <p class="mt-4 fade-in">
+                Dapatkan promo menarik dan diskon hingga 50% setiap hari.
+            </p>
+
+            <button
+                class="mt-6 px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-200 transition hover:scale-105"
+            >
+                Mulai Belanja
+            </button>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-800 text-white py-10">
+            <div
+                class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm"
+            >
+                <div>
+                    <h4 class="font-bold mb-3">TOKOKU</h4>
+                    <p class="text-gray-300">
+                        Toko online modern untuk kebutuhan sehari-hari.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3">Menu</h4>
+                    <p>Home</p>
+                    <p>Products</p>
+                    <p>Categories</p>
+                    <p>Contact</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3">Kontak</h4>
+                    <p>Email: info@tokoku.com</p>
+                    <p>Telp: +62 812 3456 7890</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const fadeEls = document.querySelectorAll(".fade-in");
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            // Mobile menu
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Fade-in scroll animation
+            function showElements() {
+                fadeEls.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight * 0.85) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", showElements);
+            window.addEventListener("load", showElements);
+        </script>
+    </body>
+</html>

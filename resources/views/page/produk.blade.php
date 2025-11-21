@@ -40,21 +40,22 @@
 
                         <p class="text-sm text-gray-600">{{ $item->Category->nama }}</p>
 
-                        <h3 class="font-semibold text-lg">{{ $item->nama }}</h3>
+                        <h3 class=" text-lg">{{ $item->nama }}</h3>
+                        <h3 class=" text-lg">⭐⭐⭐⭐</h3>
 
                         <p class="text-sm text-gray-500 line-clamp-2">
                             {{ $item->deskripsi }}
                         </p>
 
-                        <p class="text-green-600 font-bold text-lg mb-2">
-                            Rp {{ number_format($item->harga, 0, ',', '.') }}
+                        <p class=" font-semibold text-lg mb-2">
+                            Rp{{ number_format($item->harga, 0, ',', '.') }}
                         </p>
 
-                        <a href="{{ route('detail-produk', $item->id) }}"
+                        {{-- <a href="{{ route('detail-produk', $item->id) }}"
                             class="mt-auto px-4 py-2 bg-[#ff6f00] text-white rounded-lg shadow-lg 
                   hover:bg-[#e65c00] text-center block">
                             Lihat Produk
-                        </a>
+                        </a> --}}
 
                     </div>
                 </div>
